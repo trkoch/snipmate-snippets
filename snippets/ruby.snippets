@@ -910,6 +910,8 @@ snippet it
 snippet itp
 	it "${1:spec_name}"
 	${2}
+snippet its
+	its(:${1:method}) { should ${2} }
 snippet desc
 	describe ${1:class_name} do
 		${2}
@@ -926,3 +928,19 @@ snippet aft
 	after :${1:each} do
 		${2}
 	end
+snippet let
+	let(:${1:method}) { ${2} }
+snippet subj
+	subject { ${1} }
+snippet spec
+	specify { subject.${1} }
+snippet exp
+	expect(${1:object}).to ${2}
+snippet bt
+	be_true
+snippet bf
+	be_false
+snippet shared
+	shared_examples "${1:shared examples name}" ${2}
+snippet itb
+	it_behaves_like "${1:shared examples name}"${2}
