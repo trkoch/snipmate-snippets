@@ -538,16 +538,26 @@ snippet legend
 snippet legend+
 	<legend><span>${1}</span></legend>
 snippet li
-	<li>${1}</li>
+	<li>
+		${1}
+	</li>
 snippet li.
-	<li class="${1}">${2}</li>
+	<li class="${1}">
+		${2}
+	</li>
 snippet li+
-	<li>${1}</li>
+	<li>
+		${1}
+	</li>
 	li+${2}
 snippet lia
-	<li><a href="${2:#}">${1}</a></li>
+	<li>
+		<a href="${2:#}">${1}</a>
+	</li>
 snippet lia+
-	<li><a href="${2:#}">${1}</a></li>
+	<li>
+		<a href="${2:#}">${1}</a>
+	</li>
 	lia+${3}
 snippet link
 	<link rel="${1}" href="${2}" title="${3}" type="${4}">${5}
