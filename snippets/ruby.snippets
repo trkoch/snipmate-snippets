@@ -99,10 +99,10 @@ snippet cla ClassName = Struct .. do .. end
 			${4}
 		end
 	end
-snippet cla class BlankSlate .. initialize .. end
-	class ${1:BlankSlate}
-		instance_methods.each { |meth| undef_method(meth) unless meth =~ /\A__/ }
-	end
+# snippet cla class BlankSlate .. initialize .. end
+# 	class ${1:BlankSlate}
+# 		instance_methods.each { |meth| undef_method(meth) unless meth =~ /\A__/ }
+# 	end
 snippet cla class << self .. end
 	class << ${1:self}
 		${2}
@@ -913,7 +913,7 @@ snippet itp
 snippet its
 	its(:${1:method}) { should ${2} }
 snippet desc
-	describe ${1:class_name} do
+	describe "${1:desc_name}" do
 		${2}
 	end
 snippet cont
@@ -944,3 +944,5 @@ snippet shared
 	shared_examples "${1:shared examples name}" ${2}
 snippet itb
 	it_behaves_like "${1:shared examples name}"${2}
+snippet shr
+	should_receive(${1:message})
